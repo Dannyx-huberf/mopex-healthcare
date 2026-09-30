@@ -1,8 +1,8 @@
 // src/components/layout/Navbar.jsx
 import { useEffect, useState } from 'react';
 import { Menu, Phone, X } from 'lucide-react';
-import { navLinks } from '../../data/navLinks';
-import { siteInfo } from '../../data/siteInfo';
+import { navLinks } from '../../data/navlinks.js';
+import { siteInfo } from '../../data/siteInfo.js';
 import Button from '../ui/Button';
 import logo from '../../assets/logo.svg';
 

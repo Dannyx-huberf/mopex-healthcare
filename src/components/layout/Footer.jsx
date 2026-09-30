@@ -1,8 +1,8 @@
 // src/components/layout/Footer.jsx
 import { Mail, MapPin, Phone } from 'lucide-react';
-import { siteInfo } from '../../data/siteInfo';
-import { navLinks } from '../../data/navLinks';
-import { services } from '../../data/services';
+import { siteInfo } from '../../data/siteInfo.js';
+import { navLinks } from '../../data/navlinks.js';
+import { services } from '../../data/services.js';
 import logo from '../../assets/logo.svg';
 
 /** Inline brand SVG paths — avoids depending on icon-library brand icons. */

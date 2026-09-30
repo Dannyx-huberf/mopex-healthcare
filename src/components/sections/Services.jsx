@@ -1,7 +1,7 @@
 // src/components/sections/Services.jsx
 import { ArrowRight, PhoneCall } from 'lucide-react';
-import { services } from '../../data/services';
-import { siteInfo } from '../../data/siteInfo';
+import { services } from '../../data/services.js';
+import { siteInfo } from '../../data/siteInfo.js';
 import SectionTitle from '../ui/SectionTitle';
 import ServiceCard from '../ui/ServiceCard';
 import Reveal from '../ui/Reveal';

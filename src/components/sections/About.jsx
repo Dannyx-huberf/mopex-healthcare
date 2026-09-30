@@ -9,8 +9,8 @@ import {
   FileText,
   BadgeCheck,
 } from 'lucide-react';
-import { siteInfo } from '../../data/siteInfo';
-import { stats } from '../../data/stats';
+import { siteInfo } from '../../data/siteInfo.js';
+import { stats } from '../../data/stats.js';
 import SectionTitle from '../ui/SectionTitle';
 import Reveal from '../ui/Reveal';
 

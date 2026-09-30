@@ -1,7 +1,7 @@
 // src/components/sections/FAQ.jsx
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { faqs } from '../../data/faqs';
+import { faqs } from '../../data/faqs.js';
 import SectionTitle from '../ui/SectionTitle';
 import Reveal from '../ui/Reveal';
 

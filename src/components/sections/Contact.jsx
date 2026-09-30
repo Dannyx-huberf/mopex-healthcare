@@ -13,8 +13,8 @@ import {
   CalendarDays,
 } from 'lucide-react';
 
-import { siteInfo } from '../../data/siteInfo';
-import { services } from '../../data/services';
+import { siteInfo } from '../../data/siteInfo.js';
+import { services } from '../../data/services.js';
 import SectionTitle from '../ui/SectionTitle';
 import Reveal from '../ui/Reveal';
 import Button from '../ui/Button';
