@@ -1,0 +1,107 @@
+/* src/index.css */
+@import "tailwindcss";
+
+@theme {
+  /* ===== Brand Colors: calm medical blue ===== */
+  --color-primary-50:  #eef6ff;
+  --color-primary-100: #d9eaff;
+  --color-primary-200: #bcdaff;
+  --color-primary-300: #8ec2ff;
+  --color-primary-400: #5aa3f0;
+  --color-primary-500: #2f80d8;
+  --color-primary-600: #1f66bd;
+  --color-primary-700: #1c5299;
+  --color-primary-800: #1c467d;
+  --color-primary-900: #1b3b66;
+  --color-primary-950: #0f2340;
+
+  /* ===== Accent: fresh sky / cyan ===== */
+  --color-accent-50:  #ecfcff;
+  --color-accent-100: #d0f6fd;
+  --color-accent-200: #a6ecfa;
+  --color-accent-300: #67dcf3;
+  --color-accent-400: #2cc4e6;
+  --color-accent-500: #0aa8cf;
+  --color-accent-600: #0788ad;
+  --color-accent-700: #0b6d8c;
+  --color-accent-800: #10586f;
+  --color-accent-900: #114a5d;
+
+  /* ===== Font Family ===== */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* ===== Box Shadows (blue-tinted) ===== */
+  --shadow-soft: 0 4px 20px -6px rgba(28, 82, 153, 0.16);
+  --shadow-card: 0 18px 40px -18px rgba(28, 82, 153, 0.35);
+
+  /* ===== Custom Animations ===== */
+  --animate-fade-up: fade-up 0.6s ease-out both;
+  --animate-float: float 5s ease-in-out infinite;
+
+  /* ===== Keyframes (must live inside @theme) ===== */
+  @keyframes fade-up {
+    0%   { opacity: 0; transform: translateY(18px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+  }
+}
+
+/* ===== Base Styles ===== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white font-sans text-slate-600 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold tracking-tight text-slate-900;
+  }
+
+  section[id] {
+    @apply scroll-mt-24;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  }
+
+  ::selection {
+    @apply bg-primary-200 text-primary-900;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* ===== Reusable Component Layers ===== */
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
